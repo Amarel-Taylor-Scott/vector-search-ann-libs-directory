@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vector-search-ann-libs-directory"
+version = "0.1.0"
+description = "A curated, machine-readable directory of approximate-nearest-neighbor (ANN) / vector-search libraries (HNSW, trees, quantization), with a CLI."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Amarel Taylor Scott" }]
+keywords = ["ann", "vector-search", "hnsw", "faiss", "nearest-neighbor", "directory", "registry"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.urls]
+Repository = "https://github.com/Amarel-Taylor-Scott/vector-search-ann-libs-directory"
+
+[project.scripts]
+annlib-dir = "main:main"
+
+[tool.setuptools]
+py-modules = ["__version__", "data", "report", "main"]

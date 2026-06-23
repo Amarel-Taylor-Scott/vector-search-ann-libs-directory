@@ -1,0 +1,16 @@
+name: Add / update a library
+description: Suggest a new ANN/vector-search library or a correction
+labels: ["entry"]
+body:
+  - type: input
+    id: name
+    attributes: { label: Library name }
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes: { label: GitHub repo URL }
+    validations: { required: true }
+  - type: textarea
+    id: details
+    attributes: { label: Org, category, open source?, license, what it does }
+    validations: { required: true }
