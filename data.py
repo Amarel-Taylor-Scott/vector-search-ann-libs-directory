@@ -70,6 +70,11 @@ TOOLS: list[Tool] = [
          note="Graph & tree-based ANN library (Neighborhood Graph and Tree).",
          tags=("graph", "tree")),
 
+    Tool("JVector", "DataStax", Category.graph_hnsw,
+         "https://github.com/datastax/jvector", True, "Apache-2.0",
+         note="Java graph index with HNSW-style layers and Vamana search graphs.",
+         tags=("java", "graph", "vamana", "hnsw")),
+
     # --- Tree & quantization libraries ---
     Tool("FAISS", "Meta", Category.tree_quant,
          "https://github.com/facebookresearch/faiss", True, "MIT",
@@ -97,4 +102,16 @@ TOOLS: list[Tool] = [
          "https://github.com/microsoft/SPTAG", True, "MIT",
          note="Space Partition Tree And Graph ANN library.",
          tags=("tree", "graph")),
+    Tool("cuVS", "NVIDIA", Category.other,
+         "https://github.com/NVIDIA/cuvs", True, "Apache-2.0",
+         note="GPU vector search with a CAGRA graph index and C++ and Python APIs.",
+         tags=("gpu", "cagra", "cuda")),
+    Tool("FALCONN", "FALCONN contributors", Category.other,
+         "https://github.com/FALCONN-LIB/FALCONN", True, "MIT",
+         note="Header-only C++ cosine search with multi-probe hyperplane and cross-polytope hashing.",
+         tags=("lsh", "cosine", "hashing", "header-only")),
+    Tool("VSAG", "Ant Group", Category.other,
+         "https://github.com/antgroup/vsag", True, "Apache-2.0",
+         note="C++ library with HGraph for dense vectors and SINDI for sparse vectors.",
+         tags=("graph", "sparse", "dense", "hgraph")),
 ]
