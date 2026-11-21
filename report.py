@@ -66,6 +66,15 @@ def generate() -> str:
     out.append("annlib-dir generate             # regenerate this README")
     out.append("```\n")
 
+    out.append("The [MCP Servers Directory](https://github.com/Amarel-Taylor-Scott/mcp-servers-directory#quick-start) "
+               "bundles a pinned snapshot of this catalog. Install its CLI once to search the snapshot offline.\n")
+    out.append("```bash")
+    out.append("pipx install git+https://github.com/Amarel-Taylor-Scott/mcp-servers-directory.git")
+    out.append('mcp-dir search "CAGRA GPU acceleration" --scope libraries --mode bm25 --limit 3')
+    out.append("```\n")
+    out.append("This query finds NVIDIA cuVS. Add `--format json` for the project URL and pinned catalog source. "
+               "[More search examples](https://github.com/Amarel-Taylor-Scott/mcp-servers-directory/blob/main/resources/search-and-retrieval.md)\n")
+
     out.append("## At a glance\n")
     out.append(f"- **{total}** libraries across **{len(categories)}** categories")
     out.append(f"- 🟢 **{oss}** open source\n")
